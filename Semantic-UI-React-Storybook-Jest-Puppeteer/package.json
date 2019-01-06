@@ -1,0 +1,40 @@
+{
+	"name": "Semantic-UI-React-Storybook",
+	"version": "1.0.0",
+	"description": "Demo native react components built for the Semantic UI Framework",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"storybook": "start-storybook -p 9001",
+		"deploy-storybook": "storybook-to-ghpages",
+		"jest:integration": "jest",
+		"test:integration": "start-server-and-test storybook http-get://localhost:9001 jest:integration"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/white-rabbit-japan/Semantic-UI-React-Storybook.git"
+	},
+	"author": "",
+	"license": "MIT",
+	"devDependencies": {
+		"@kadira/storybook": "^1.35.1",
+		"jest": "^23.6.0",
+		"jest-image-snapshot": "^2.7.0",
+		"jest-puppeteer": "^3.7.0",
+		"puppeteer": "^1.11.0",
+		"raw-loader": "^0.5.1",
+		"start-server-and-test": "^1.7.11",
+		"style-loader": "^0.13.1"
+	},
+	"dependencies": {
+		"@kadira/react-storybook-addon-info": "^3.0.8",
+		"@kadira/storybook-deployer": "^1.0.0",
+		"react": "^15.1.0",
+		"react-dom": "^15.1.0",
+		"semantic-ui-css": "^2.2.1",
+		"stardust": "^0.16.2"
+	},
+	"jest": {
+		"preset": "jest-puppeteer",
+		"setupTestFrameworkScriptFile": "<rootDir>integration/setupTests.js"
+	}
+}
